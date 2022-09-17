@@ -1,0 +1,58 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.autohooks]
+mode = "poetry"
+
+[tool.bandit]
+exclude = "tests/"
+
+[tool.poetry]
+authors = [
+    "Robin Walter <hello@robinwalter.me>",
+]
+classifiers = [
+    "",
+]
+description = ""
+documentation = "https://github.com/robinwalterfit/budget-book"
+include = [
+    "CHANGELOG.md",
+    "../../LICENSE",
+]
+keywords = [
+    "",
+]
+license = ""
+homepage = "https://github.com/robinwalterfit/budget-book"
+name = "budget-book"
+readme = "README.rst"
+repository = "https://github.com/robinwalterfit/budget-book"
+version = "0.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.7.2"
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.7.4"
+pytest = "^7.1.2"
+pytest-benchmark = "^3.4.1"
+pylint = "^2.14.5"
+flake8 = "^5.0.4"
+pydocstyle = "^6.1.1"
+mypy = "^0.971"
+radon = "^5.1.0"
+pytest-cov = "^3.0.0"
+pytest-monitor = "^1.6.4"
+
+[tool.poetry.scripts]
+
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/robinwalterfit/budget-book/issues"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src",
+]

@@ -1,0 +1,56 @@
+{
+    "author": {
+        "name": "Robin Walter",
+        "email": "hello@robinwalter.me",
+        "url": "https://robinwalter.me/"
+    },
+    "bugs": {
+        "url": "https://github.com/robinwalterfit/budget-book/issues"
+    },
+    "dependencies": {
+    },
+    "description": "",
+    "devDependencies": {
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "@commitlint/cz-commitlint": "^17.0.3",
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "4.2.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "shell-quote": "^1.7.3",
+        "typescript": "^4.7.4"
+    },
+    "engines": {
+        "node": ">= 12.22.0",
+        "pnpm": ">= 7.2.1"
+    },
+    "homepage": "https://github.com/robinwalterfit/budget-book",
+    "license": "Apache-2.0",
+    "name": "budget-book",
+    "packageManager": "pnpm@7.5.1",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/robinwalterfit/budget-book.git"
+    },
+    "scripts": {
+        "dev": "pnpm -r do:dev",
+        "generate": "pnpm -r do:build",
+        "lint": "pnpm -r do:lint",
+        "lint:staged": "lint-staged",
+        "prepare": "husky install",
+        "start": "pnpm -r do:start",
+        "test": "pnpm -r do:test",
+        "typecheck": "pnpm -r do:typecheck"
+    },
+    "version": "0.0.0",
+    "workspaces": [
+        "packages/*"
+    ]
+}

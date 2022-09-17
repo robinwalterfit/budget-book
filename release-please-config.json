@@ -1,0 +1,7 @@
+{
+    "packages": {
+        "packages/budget-book": {}
+    },
+    "release-type": "python",
+    "separate-pull-requests": true
+}
