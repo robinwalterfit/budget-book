@@ -1,6 +1,6 @@
-.vscode
-node_modules
-**/dist/**
-test/**/out/**
+.vscode/
+**/node_modules/
+**/public/
+.release-please-manifest.json
 pnpm-lock.yaml
-poetry.lock
+release-please-config.json

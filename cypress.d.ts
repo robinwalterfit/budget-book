@@ -1,5 +1,5 @@
 /**
- * Lint commit messages to prevent bad commits.
+ * Add the Cypress namespace to the global scope.
  *
  *   Copyright 2023 Robin Walter <hello@robinwalter.me>
  *
@@ -16,31 +16,19 @@
  *   limitations under the License.
  *
  * @author Robin Walter <hello@robinwalter.me>
- * @file This file is used to setup commitlint.
  * @license SPDX-License-Identifier: Apache-2.0
- * @see {@link https://commitlint.js.org/#/reference-configuration}
  */
 
-module.exports = {
-    extends: ["@commitlint/config-conventional"],
-    rules: {
-        "scope-enum": [
-            2,
-            "always",
-            [
-                "cms",
-                "design",
-                "devcontainer",
-                "docker",
-                "editor",
-                "git",
-                "github",
-                "linter",
-                "next",
-                "react",
-                "server",
-                "website",
-            ],
-        ],
-    },
+import { mount } from "cypress/react18"
+
+// Augment the Cypress namespace to include type definitions for
+// your custom command.
+// Alternatively, can be defined in cypress/support/component.d.ts
+// with a <reference path="./component" /> at the top of your spec.
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            mount: typeof mount
+        }
+    }
 }
